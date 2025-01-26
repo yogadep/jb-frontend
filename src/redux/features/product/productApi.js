@@ -1,0 +1,176 @@
+// import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+
+// const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://jibo-backend.vercel.app'; // URL backend Anda
+
+// export const productApi = createApi({
+//     reducerPath: 'productApi',
+//     baseQuery: fetchBaseQuery({
+//         baseUrl: BASE_URL,
+//         prepareHeaders: (headers, { getState }) => {
+//             const token = getState().auth.token;
+//             if (token) {
+//                 headers.set('authorization', `Bearer ${token}`);
+//             }
+//             return headers;
+//         },
+//     }),
+//     tagTypes: ["Product"],
+//     endpoints: (builder) => ({
+//         // Mendapatkan semua produk
+//         fetchGetAllProducts: builder.query({
+//             query: () => '/product',
+//         }),
+//         // Mendapatkan detail produk
+//         fetchGetProduct: builder.query({
+//             query: (id) => `/product/${id}`,
+//         }),
+//         // Menambahkan produk baru
+//         createProduct: builder.mutation({
+//             query: (formData) => ({
+//                 url: '/product',
+//                 method: 'POST',
+//                 body: formData,
+//             }),
+//         }),
+//         // Mengupdate produk
+//         updateProduct: builder.mutation({
+//             query: ({ id, formData }) => ({
+//                 url: `/product/${id}`,
+//                 method: 'PUT',
+//                 body: formData,
+//             }),
+//         }),
+//         // Menghapus produk
+//         deleteProduct: builder.mutation({
+//             query: (id) => ({
+//                 url: `/product/${id}`,
+//                 method: 'DELETE',
+//             }),
+//         }),
+//     }),
+// });
+
+// export const {
+//     useFetchGetAllProductsQuery,
+//     useFetchGetProductQuery,
+//     useCreateProductMutation,
+//     useUpdateProductMutation,
+//     useDeleteProductMutation,
+// } = productApi;
+
+// export default productApi;
+
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
+
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://jibo-backend.vercel.app';
+
+export const productApi = createApi({
+    reducerPath: 'productApi',
+    baseQuery: fetchBaseQuery({
+        baseUrl: BASE_URL,
+        prepareHeaders: (headers, { getState }) => {
+            const token = getState().auth.token;
+            if (token) {
+                headers.set('authorization', `Bearer ${token}`);
+            }
+            return headers;
+        },
+    }),
+    tagTypes: ["Product"],
+    endpoints: (builder) => ({
+        // Mendapatkan semua produk
+        fetchGetAllProducts: builder.query({
+            query: () => ({
+                url: '/product',
+                method: 'GET'
+            }),
+            transformResponse: (response) => {
+                return {
+                    products: response.products.map(product => ({
+                        ...product,
+                        // Gunakan URL langsung dari response
+                        image: product.image
+                    }))
+                };
+            },
+            providesTags: ['Product']
+        }),
+
+        // Mendapatkan produk berdasarkan kategori
+        fetchProductsByCategory: builder.query({
+            query: (category) => ({
+                url: `/product/${category}`,
+                method: 'GET'
+            }),
+            transformResponse: (response) => {
+                return {
+                    products: response.products.map(product => ({
+                        ...product,
+                        // Gunakan URL langsung dari response
+                        image: product.image
+                    }))
+                };
+            },
+            providesTags: ['Product']
+        }),
+
+        // Mendapatkan detail produk
+        fetchGetProduct: builder.query({
+            query: (id) => ({
+                url: `/product/${id}`,
+                method: 'GET'
+            }),
+            transformResponse: (response) => ({
+                ...response,
+                product: {
+                    ...response.product,
+                    // Gunakan URL langsung dari response
+                    image: response.product.image
+                }
+            }),
+            providesTags: ['Product']
+        }),
+
+        // Menambahkan produk baru
+        createProduct: builder.mutation({
+            query: (formData) => ({
+                url: '/product',
+                method: 'POST',
+                body: formData,
+                formData: true,
+            }),
+            invalidatesTags: ['Product']
+        }),
+
+        // Mengupdate produk
+        updateProduct: builder.mutation({
+            query: ({ id, formData }) => ({
+                url: `/product/${id}`,
+                method: 'PUT',
+                body: formData,
+                formData: true,
+            }),
+            invalidatesTags: ['Product']
+        }),
+
+        // Menghapus produk
+        deleteProduct: builder.mutation({
+            query: (id) => ({
+                url: `/product/${id}`,
+                method: 'DELETE',
+            }),
+            invalidatesTags: ['Product']
+        }),
+    }),
+});
+
+export const {
+    useFetchGetAllProductsQuery,
+    useFetchProductsByCategoryQuery,
+    useFetchGetProductQuery,
+    useCreateProductMutation,
+    useUpdateProductMutation,
+    useDeleteProductMutation,
+} = productApi;
+
+export default productApi;
