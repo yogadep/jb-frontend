@@ -1,11 +1,22 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+const isDevelopment = import.meta.env.VITE_ENV === 'development';
+
+const baseUrl = isDevelopment
+  ? 'http://localhost:3000'
+  : 'https://jibo-backend-seven.vercel.app';
+
+console.log('Environment:', import.meta.env.VITE_ENV); // Log environment
+console.log('Base URL:', baseUrl); // Log base URL
+
 const baseApi = createApi({
     reducerPath: 'baseApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: import.meta.env.VITE_API_URL || "https://jibo-backend-seven.vercel.app",
+        // baseUrl: import.meta.env.VITE_API_URL || "http://localhost:3000",
+        baseUrl,
         credentials: 'include',
     }),
+    
     endpoints: (builder) => ({
         // Login
         login: builder.mutation({

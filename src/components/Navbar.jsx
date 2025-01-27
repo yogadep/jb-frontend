@@ -7,7 +7,7 @@ import avatarImg from '../assets/commentor.png';
 import { useLogoutMutation } from '../redux/features/auth/authApi';
 import { HiOutlineLogin, HiOutlineLogout } from "react-icons/hi";
 import { MdOutlineAddchart } from "react-icons/md";
-import logoImg from "../../src/assets/jibo-logo.png"
+import logoImg from "../../src/assets/boye.png"
 import { handleLogout } from '../utility/handleLogout';
 import { motion } from 'framer-motion'
 
