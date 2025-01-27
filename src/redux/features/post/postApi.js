@@ -4,7 +4,7 @@ const isDevelopment = import.meta.env.VITE_ENV === 'development';
 
 const baseUrl = isDevelopment
   ? 'http://localhost:3000'
-  : 'https://jibo-backend-seven.vercel.app';
+  : 'https://jb-backend.vercel.app';
 
 console.log('Environment:', import.meta.env.VITE_ENV); // Log environment
 console.log('Base URL:', baseUrl); // Log base URL
