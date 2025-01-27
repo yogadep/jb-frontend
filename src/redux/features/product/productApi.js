@@ -62,7 +62,7 @@
 
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://jibo-backend.vercel.app';
+const BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://jibo-backend-seven.vercel.app';
 
 export const productApi = createApi({
     reducerPath: 'productApi',
