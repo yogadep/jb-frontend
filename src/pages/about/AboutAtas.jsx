@@ -54,8 +54,8 @@ const AboutSection = () => {
 
                         <div className="text-gray-600 leading-relaxed space-y-6">
                             <p>
-                                Welcome to <span className="font-semibold text-black">JIBOUNLIMITED</span>. 
-                                We are in the field of photography, founded by two siblings, ET, JIBO, 
+                                Welcome to <span className="font-semibold text-black">JIBO UNLIMITED</span>. 
+                                We are in the field of photography, founded by two brothers, ET, NY, 
                                 and our mentor HEN.
                             </p>
                             <p>
