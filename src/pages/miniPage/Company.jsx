@@ -5,7 +5,7 @@ import { BsBox2Heart } from "react-icons/bs";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { TfiGift } from "react-icons/tfi";
 import { BsEnvelopePaperHeart } from "react-icons/bs";
-import jiboCraft from '../../assets/JIBO CRAFT black.png';
+import jiboCraft from '../../assets/craft.png';
 // Import gallery images
 import gallery1 from '../../assets/jibocraft1.jpeg';
 import gallery2 from '../../assets/jibocraft2.jpeg';
