@@ -3,9 +3,9 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from "framer-motion";
 
 // Import images
-import slide1 from '../assets/nature.jpg';
-import slide2 from '../assets/Graduation.jpg';
-import slide3 from '../assets/prewdding.jpg';
+import slide1 from '../assets/slide1.jpg';
+import slide2 from '../assets/slide2.jpg';
+import slide3 from '../assets/slide3.jpg';
 import slide4 from '../assets/craft.jpg';
 
 const properties = [
@@ -13,30 +13,37 @@ const properties = [
         id: 1,
         image: slide1,
         location: "Photography",
-        size: "Nature",
-        price: "$ 200 000"
+        size: "Wedding",
+        // price: "$ 200 000"
     },
     {
         id: 2,
         image: slide2,
         location: "photography",
         size: "Graduation",
-        price: "$ 200 000"
+        // price: "$ 200 000"
     },
     {
         id: 3,
         image: slide3,
         location: "Photography",
-        size: "Prewedding",
-        price: "$ 500 000"
+        size: "Maternity",
+        // price: "$ 500 000"
     },
-    {
-        id: 4,
-        image: slide4,
-        location: "Crafting",
-        size: "Handmade",
-        price: "$ 50 000"
-    }
+    // {
+    //     id: 4,
+    //     image: slide4,
+    //     location: "Crafting",
+    //     size: "Handmade",
+    //     price: "$ 50 000"
+    // },
+    // {
+    //     id: 5,
+    //     image: slide4,
+    //     location: "Crafting",
+    //     size: "Handmade",
+    //     price: "$ 50 000"   
+    // }
 ];
 
 const Hero = () => {
@@ -90,38 +97,30 @@ const Hero = () => {
             <div className="flex flex-col lg:flex-row h-full">
                 {/* Left Section */}
                 <div className="relative flex flex-col justify-between w-full lg:w-[30%] px-4 md:px-6 py-8 lg:py-0">
-                    <div className="home__title flex flex-col gap-6 md:gap-8 items-center justify-center lg:h-[calc(100%-100px)] py-6 md:py-8 lg:py-12 xl:py-1 xl:gap-16 xl:max-w-xs xl:mx-auto">
-                        <motion.h1
-                            className="text-lg sm:text-4xl md:text-2xl lg:text-2xl xl:text-4xl font-bold uppercase text-center lg:text-left w-full"
-                            initial={{ opacity: 0, x: -100 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 1.5 }}
-                        >
-                            PHOTOGRAPHY <br />
-                            & Crafting
-                        </motion.h1>
+                        <div className="home__title flex flex-col gap-6 md:gap-8 justify-center lg:h-[calc(100%-100px)] py-6 md:py-8 lg:py-12 xl:py-1 xl:gap-16">
+                            <motion.h1
+                                className="text-lg sm:text-4xl md:text-2xl lg:text-2xl xl:text-4xl font-bold uppercase text-center w-full"
+                                initial={{ opacity: 0, x: -100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 1.5 }}
+                            >
+                                JIBO <br />
+                                UNLIMITED
+                            </motion.h1>
 
-                        <motion.h4
-                            className="text-[#E31E24] font-bold uppercase text-center lg:text-left lg:self-end text-xs sm:text-lg md:text-base"
-                            initial={{ opacity: 0, x: -100 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 2 }}
-                        >
-                            PHOTOGRAPHY <br />
-                            modern desain <br />
-                            best for you.
-                        </motion.h4>
-                        <motion.button
-                            className="border border-[#E31E24] hover:bg-red-800 px-4 md:px-5 py-2 text-sm md:text-base uppercase xl:self-start"
-                            initial={{ opacity: 0, x: -100 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 3 }}
-                        >
-                            contact us
-                        </motion.button>
+                            <motion.h4
+                                className="text-[#E31E24] font-bold uppercase text-center text-xs sm:text-lg md:text-base"
+                                initial={{ opacity: 0, x: -100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 2 }}
+                            >
+                                PHOTOGRAPHY <br />
+                                & CRAFTING <br />
+                            </motion.h4>
                     </div>
-
-                    <div className="button__control flex items-center justify-center gap-4 xl:bg-secondcolor lg:bg-secondcolor sm:bg-transparent w-full h-[60px] sm:h-[70px] md:h-[80px] lg:h-[140px] lg:mt-0 sm:-mb-8 lg:w-[384px] lg:-ml-7">
+                    <div className="button__control flex items-center justify-center gap-4 
+                    w-full h-[60px] sm:h-[70px] md:h-[80px] lg:h-[140px] 
+                    bg-[#120d0d] lg:w-[384px] lg:-ml-7">
                         <motion.button
                             onClick={handlePrevSlide}
                             className="carousel__button__prev lg:-mt-6 h-8 w-8 sm:h-9 sm:w-9 md:h-10 md:w-10 lg:h-12 lg:w-12 border-2 border-[#808080] rounded-full grid place-items-center hover:scale-120 hover:border-white transition-all duration-300 ease-in-out"

@@ -1,6 +1,6 @@
 import React from "react";
-import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
-import logo from "../assets/jibo-logo.png";
+import { FaInstagram, FaWhatsapp, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import logo from "../assets/jibo.jpg";
 import { motion } from "framer-motion";
 
 const Footer = () => {
@@ -17,21 +17,19 @@ const Footer = () => {
                     alt="logo"
                     className="w-52"
                 />
-
                 {/* Kontak */}
                 <motion.div
                     className="text-center"
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 2 }}>
-                    <a href="tel:+88 333 78 901" className="block">
-                        1092018308
+                    <a href="tel:+6285810007180" className="block">
+                        0858-1000-7180
                     </a>
-                    <a href="mailto:z8xH3@example.com" className="block">
-                        Lorem, ipsum.@gmail.com
+                    <a href="mailto:jibounlimited@gmail.com" className="block">
+                        jibounlimited@gmail.com
                     </a>
                 </motion.div>
-
                 {/* Garis Pemisah */}
                 <span
                     className="border-b w-40 opacity-50"
@@ -46,15 +44,18 @@ const Footer = () => {
                     initial={{ opacity: 0, y: 100 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 3 }}>
-                    <FaFacebookF
-                        className="cursor-pointer hover:text-firstcolor duration-300 text-2xl"
-                    />
-                    <FaInstagram
-                        className="cursor-pointer hover:text-firstcolor duration-300 text-2xl"
-                    />
-                    <FaTwitter
-                        className="cursor-pointer hover:text-firstcolor duration-300 text-2xl"
-                    />
+                        <a href="mailto:jibounlimited@gmail.com" className="flex items-center gap-2">
+                            <FaEnvelope className="cursor-pointer hover:text-firstcolor duration-300 text-2xl" />
+                        </a>
+                        <a href="https://www.instagram.com/jibounlimited/" target="_blank" rel="noopener noreferrer">
+                            <FaInstagram className="cursor-pointer hover:text-firstcolor duration-300 text-2xl" />
+                        </a>
+                        <a href="https://api.whatsapp.com/send?phone=6285810007180&text=Assalammualaikum%20JIBO%20HQ%20Mau%20Tanya%20Pricelist%20Kak%20Matursuwun&fbclid=PAZXh0bgNhZW0CMTEAAabryvcoqeCnCcQ87vd481BeReU_a87dKDAktmbsfz8dABF6wfX22dVmimM_aem_A-N__spNH158qE5B5Hdk0Q" target="_blank" rel="noopener noreferrer">
+                            <FaWhatsapp className="cursor-pointer hover:text-firstcolor duration-300 text-2xl" />
+                        </a>
+                        <a href="https://maps.app.goo.gl/ePz93wgHkY6dPWzc9" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                            <FaMapMarkerAlt className="cursor-pointer hover:text-firstcolor duration-300 text-2xl" />
+                        </a>
                 </motion.div>
             </motion.div>
 
@@ -65,7 +66,7 @@ const Footer = () => {
                 transition={{ duration: 3.5 }}
             >
                 <p className="text-whitecolor text-xs text-center mt-10 opacity-50">
-                    Copyright &copy; 2024 jibo. All rights reserved.
+                    Copyright &copy; 2025 Jibo Unlimited. All rights reserved.
                 </p>
             </motion.div>
         </div>

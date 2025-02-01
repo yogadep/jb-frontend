@@ -7,7 +7,7 @@ import avatarImg from '../assets/commentor.png';
 import { useLogoutMutation } from '../redux/features/auth/authApi';
 import { HiOutlineLogin, HiOutlineLogout } from "react-icons/hi";
 import { MdOutlineAddchart } from "react-icons/md";
-import logoImg from "../../src/assets/boye.png"
+import logoImg from "../../src/assets/jibo.jpg"
 import { handleLogout } from '../utility/handleLogout';
 import { motion } from 'framer-motion'
 
@@ -97,7 +97,9 @@ const Navbar = () => {
                     <button onClick={toggleDesktopMenu} className="hidden xl:block lg:block text-white text-xl font-bold cursor-pointer">
                         {isDesktopMenuOpen ? <IoClose /> : <RiMenu4Fill />}
                     </button>
-                    <div className="tracking-widest font-bold xl:block lg:block hidden lg:ml-20 xl:ml-48  sm:text-sm">Abadikan Setiap Momen Kebahagian Di Jibo Ulimited</div>
+                    <div className="tracking-widest font-bold xl:block lg:block hidden lg:ml-20 xl:ml-48  sm:text-sm">
+                        Capture Every Moment of Happiness at Jibo Unlimited
+                    </div>
                 </div>
 
                 {/* Desktop Menu with Product Dropdown */}
