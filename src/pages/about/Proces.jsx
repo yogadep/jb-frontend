@@ -10,34 +10,34 @@ const Process = () => {
 
     const contentData = {
         1: {
-            title: "Acquaintance with the customer",
+            title: "Initial Photoshoot",
             paragraphs: [
-                "The first thing we do is meeting with our clients and talk through their goals on a future project. During this meeting, feel free to communicate your ideas and ask lots of questions.",
-                "This stage is highly decisive as you can evaluate the work of your potential architect by browsing their portfolio. As a client, you may also assess whether the architect listens to your needs and confirms that he or she understands them.",
+                "The first step in our photo process is the initial photoshoot. We meet with the client to understand their vision and capture the required moments, whether for portraits, weddings, or other events.",
+                "During this stage, we ensure that every detail is captured perfectly with a focus on lighting, angles, and composition.",
             ],
             image: imp1,
         },
         2: {
-            title: "Project Concept Development",
+            title: "Photo Selection",
             paragraphs: [
-                "In this stage, we develop a project concept based on the client’s preferences and ideas. We present the concept in a visual format to ensure that the client’s vision is accurately represented.",
-                "This phase involves a lot of back-and-forth communication, allowing us to refine the project concept until it meets the client’s expectations.",
+                "After the shoot, we select the best images from the session. We carefully choose photos that represent the moments in the best possible way.",
+                "This step is crucial for ensuring we present the client with only the finest shots for further processing.",
             ],
             image: imp2,
         },
         3: {
-            title: "Working on Interior and Exterior",
+            title: "Photo Editing",
             paragraphs: [
-                "Once the concept is approved, we start working on the interior and exterior designs. We make sure that all design elements are in harmony, creating a cohesive and aesthetically pleasing result.",
-                "We present detailed plans and 3D visualizations to help the client understand how the final project will look and feel.",
+                "In this stage, we enhance the selected images using professional editing techniques. This includes color correction, retouching, and special effects to make each image shine.",
+                "We ensure that every detail is polished to perfection, keeping the client’s preferences in mind while maintaining a natural and artistic look.",
             ],
             image: imp3,
         },
         4: {
-            title: "Finishing Touches for your future home",
+            title: "Final Delivery",
             paragraphs: [
-                "The final stage involves adding the finishing touches to the project. We ensure that every detail is perfect and meets the client’s standards.",
-                "This is where we add the final flourishes that turn a house into a home, making sure it is ready for the client to move in.",
+                "Once the editing is complete, we prepare the final images for delivery. We provide the client with high-resolution files and can offer printed options upon request.",
+                "This is where the project is wrapped up, and the client receives their perfectly edited photos, ready to be cherished.",
             ],
             image: imp4,
         },
@@ -54,7 +54,7 @@ const Process = () => {
                         transition={{ duration: 0.8, type: "spring" }}
                         className="text-lg text-firstcolor font-bold uppercase"
                     >
-                        4 steps to a new home
+                        4 steps to a perfect photo
                     </motion.h4>
 
                     <motion.h1

@@ -115,7 +115,8 @@ const Hero = () => {
                                 transition={{ duration: 2 }}
                             >
                                 PHOTOGRAPHY <br />
-                                & CRAFTING <br />
+                                &  <br />
+                                CRAFTING <br />
                             </motion.h4>
                     </div>
                     <div className="button__control flex items-center justify-center gap-4 
