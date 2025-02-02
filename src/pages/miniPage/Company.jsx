@@ -66,6 +66,18 @@ const Company = () => {
                                 Each piece we create is handcrafted with attention to detail and a commitment to quality, 
                                 ensuring that every item perfectly captures the significance of your special moments.
                             </motion.p>
+                            <p>    
+                                If you have any questions, need a custom design, or simply want to explore more of our handcrafted collections, feel free to reach out to us via 
+                                <motion.span className="relative inline-block mx-1">
+                                    <motion.span className="absolute inset-0 bg-white px-2 py-0.5 rounded-lg shadow-md" initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1.2, ease: "easeOut" }} style={{ originX: 0 }}></motion.span>
+                                    <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" className="relative z-10 font-bold text-gray-900">WhatsApp</a>
+                                </motion.span> 
+                                or stay updated with our latest creations by following us on 
+                                <motion.span className="relative inline-block mx-1">
+                                    <motion.span className="absolute inset-0 bg-white px-2 py-0.5 rounded-lg shadow-md" initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1.2, ease: "easeOut" }} style={{ originX: 0 }}></motion.span>
+                                    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="relative z-10 font-bold text-gray-900">Instagram</a>
+                                </motion.span>. We’d love to connect with you!
+                            </p>
                         </div>
                     </motion.div>
                     <motion.div className="space-y-6" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
