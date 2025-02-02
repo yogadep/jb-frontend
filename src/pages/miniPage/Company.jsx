@@ -111,10 +111,6 @@ const Company = () => {
                         ))}
                     </motion.div>
                 </div>
-                    <div className="mt-24 flex justify-center items-center mt-2">
-                        <div className="w-16 h-1 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full">
-                    </div>
-                </div>
                 <motion.div className="mt-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
                     <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Our Latest Works</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
