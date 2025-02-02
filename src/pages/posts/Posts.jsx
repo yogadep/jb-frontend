@@ -51,11 +51,6 @@ const Posts = () => {
                         Our creations & <br />
                         Find Your Inspiration
                     </h2>
-                    {/* <h4
-                        className="text-xl sm:text-lg text-gray-400"
-                    >
-                        Artikel Terbaru
-                    </h4> */}
                 </motion.div>
 
                 {isLoading ? (

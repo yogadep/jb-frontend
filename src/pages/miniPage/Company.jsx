@@ -113,7 +113,8 @@ const Company = () => {
                 </div>
                 <motion.div className="mt-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
                     <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Our Latest Works</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"> */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
                         {galleryImages.map((image, index) => (
                             <motion.div key={index} className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg shadow-lg group" whileHover={{ scale: 1.05 }}>
                                 <img src={image.src} alt={image.alt} className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300" />

@@ -23,7 +23,6 @@ export default function HeroSection() {
                 variants={containerVariants}
                 className="max-w-4xl mx-auto text-center"
             >
-                
                 <motion.h2 variants={itemVariants} className="text-5xl font-bold text-gray-900 leading-tight">
                     Two Brothers With A Camera
                 </motion.h2>
