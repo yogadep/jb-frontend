@@ -70,24 +70,27 @@ const Company = () => {
 
     return (
         <motion.section
-            className="bg-white py-16 px-4 sm:px-6 lg:px-8"
+            className="bg-white py-8 px-4 sm:py-16 sm:px-6 lg:px-8 min-h-screen w-full"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             variants={containerVariants}
         >
-            <div className="max-w-7xl mx-auto">
-                {/* Main Content Grid */}
-                <div className="grid lg:grid-cols-2 gap-16 mb-20">
+            <div className="w-full max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-20">
                     {/* Left Column - About */}
-                    <motion.div variants={fadeInUpVariants} className="space-y-8">
-                        <div>
-                            <h2 className="text-4xl font-bold text-gray-900 mb-6">JIBO CRAFT</h2>
+                    <motion.div variants={fadeInUpVariants} className="space-y-8 w-full">
+                        <div className="w-full">
+                            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">JIBO CRAFT</h2>
                             <div className="w-20 h-1 bg-gray-400 mb-8"></div>
-                            <div className="flex justify-center mb-6">
-                                <img src={jiboCraft} alt="JIBO CRAFT Logo" className="w-52 h-auto" />
+                            <div className="flex justify-center mb-6 w-full">
+                                <img 
+                                    src={jiboCraft} 
+                                    alt="JIBO CRAFT Logo" 
+                                    className="w-36 sm:w-52 h-auto object-contain" 
+                                />
                             </div>
-                            <div className="prose prose-lg text-gray-600 space-y-6">
+                            <div className="prose prose-sm sm:prose-lg text-gray-600 space-y-4 sm:space-y-6 w-full">
                                 <p>
                                     Welcome to the crafting division of JIBO UNLIMITED. At JIBO CRAFT, we merge traditional 
                                     craftsmanship with contemporary design to create unique pieces that tell your story.
@@ -130,48 +133,54 @@ const Company = () => {
                                         <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="relative z-10 font-bold text-gray-900">
                                             Instagram
                                         </a>
-                                    </motion.span>. We’d love to connect with you!
+                                    </motion.span>. We'd love to connect with you!
                                 </p>
                             </div>
                         </div>        
                     </motion.div>
 
                     {/* Right Column - Services */}
-                    <motion.div variants={fadeInUpVariants} className="space-y-8">
+                    <motion.div variants={fadeInUpVariants} className="space-y-4 sm:space-y-8 w-full">
                         {services.map((service, index) => (
                             <motion.div
                                 key={index}
                                 variants={fadeInUpVariants}
-                                className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+                                className="bg-gray-50 rounded-xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300 w-full"
                             >
-                                <div className="flex items-center gap-4">
-                                    <div className="text-4xl text-gray-600">
+                                <div className="flex items-start sm:items-center gap-3 sm:gap-4">
+                                    <div className="text-2xl sm:text-4xl text-gray-600 flex-shrink-0">
                                         {service.icon}
                                     </div>
-                                    <div>
-                                        <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-                                        <p className="text-gray-600">{service.description}</p>
+                                    <div className="flex-1">
+                                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 sm:mb-2">
+                                            {service.title}
+                                        </h3>
+                                        <p className="text-sm sm:text-base text-gray-600">
+                                            {service.description}
+                                        </p>
                                     </div>
                                 </div>
                             </motion.div>
                         ))}
                     </motion.div>
-                    {/* <div className="w-20 h-1 bg-gray-400 mb-8 items-center"></div> */}
                 </div>
+
                 {/* Bottom Decorative Element */}
-                <div className="mt-24 flex justify-center">
+                <div className="mt-16 sm:mt-24 flex justify-center">
                     <div className="w-16 h-1 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full"></div>
                 </div>
 
                 {/* Gallery Section */}
-                <motion.div variants={fadeInUpVariants} className="mt-20">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Our Latest Works</h3>
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <motion.div variants={fadeInUpVariants} className="mt-12 sm:mt-20 w-full">
+                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">
+                        Our Latest Works
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
                         {galleryImages.map((image, index) => (
                             <motion.div
                                 key={index}
                                 variants={fadeInUpVariants}
-                                className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg shadow-lg group"
+                                className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg shadow-lg group w-full"
                             >
                                 <img
                                     src={image.src}
