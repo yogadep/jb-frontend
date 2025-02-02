@@ -44,7 +44,7 @@ const Company = () => {
         <motion.section
             className="bg-white py-16 px-4 sm:px-6 lg:px-8"
             initial="hidden"
-            whileInView="visible"
+            animate={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             variants={containerVariants}
         >
