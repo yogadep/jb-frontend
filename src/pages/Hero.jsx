@@ -167,7 +167,7 @@ const Hero = () => {
                                     <img
                                         src={property.image}
                                         alt={property.location}
-                                        className="carousel__img w-full h-full object-cover"
+                                        className="carousel__img w-full h-full object-cover rounded-xl"
                                     />
                                 </div>
                             ))}

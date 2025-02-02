@@ -21,9 +21,6 @@ const WeddingProduct = () => {
 
     return (
         <section className="bg-[#120d0d] relative overflow-hidden py-5 px-6">
-            <div className="border-x border-gray-400 w-4/5 h-full absolute left-1/2 transform -translate-x-1/2 opacity-20 lg:w-1/2 xl:w-1/3 pointer-events-none" />
-            <div className="border-l border-gray-400 w-full h-full absolute top-0 transform translate-x-1/2 opacity-20 pointer-events-none" />
-
             <div className="container mx-auto max-w-[90rem]">
                 <motion.div
                     className="product__top flex flex-col items-center text-center gap-3 mb-10"

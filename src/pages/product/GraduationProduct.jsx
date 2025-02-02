@@ -21,8 +21,7 @@ const GraduationProduct = () => {
 
     return (
         <section className="bg-[#120d0d] relative overflow-hidden py-5 px-6">
-            <div className="border-x border-gray-400 w-4/5 h-full absolute left-1/2 transform -translate-x-1/2 opacity-20 lg:w-1/2 xl:w-1/3 pointer-events-none" />
-            <div className="border-l border-gray-400 w-full h-full absolute top-0 transform translate-x-1/2 opacity-20 pointer-events-none" />
+            
 
             <div className="container mx-auto max-w-[90rem]">
                 <motion.div
@@ -75,12 +74,12 @@ const GraduationProduct = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 2 }}
                                 >
-                                    <h3 className="text-3xl font-bold text-white sm:mb-0">
+                                    {/* <h3 className="text-3xl font-bold text-white sm:mb-0">
                                         {product.name || 'Graduation Collection'}
                                     </h3>
                                     <p className="text-gray-300 text-lg font-semibold leading-relaxed">
                                         {product.description || 'Capturing beautiful moments of your special day'}
-                                    </p>
+                                    </p> */}
                                 </motion.div>
                             </div>
                         ))}

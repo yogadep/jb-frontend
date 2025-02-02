@@ -76,7 +76,7 @@ const Company = () => {
                                         transition={{ duration: 1, ease: "easeOut" }}
                                         style={{ originX: 0 }}
                                     />
-                                    <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" className="relative z-10 font-bold text-gray-900">
+                                    <a href="https://wa.me/087888997180" target="_blank" rel="noopener noreferrer" className="relative z-10 font-bold text-gray-900">
                                         WhatsApp
                                     </a>
                                 </motion.span> 
@@ -89,7 +89,7 @@ const Company = () => {
                                         transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}  // Delay biar muncul setelah WA
                                         style={{ originX: 0 }}
                                     />
-                                    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="relative z-10 font-bold text-gray-900">
+                                    <a href="https://www.instagram.com/jibocraft/" target="_blank" rel="noopener noreferrer" className="relative z-10 font-bold text-gray-900">
                                         Instagram
                                     </a>
                                 </motion.span>. We’d love to connect with you!
