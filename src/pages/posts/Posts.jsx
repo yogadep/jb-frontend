@@ -62,7 +62,10 @@ const Posts = () => {
                         {error?.data?.message || 'Terjadi kesalahan. Silakan coba lagi nanti.'}
                     </div>
                 ) : (
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mt-8 sm:mt-16">
+                    // mobile 2 kolom
+                    // <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8 mt-8 sm:mt-16">
+                    // mobile 1 kolom
+                    <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 sm:gap-8 mt-8 sm:mt-16">
                         {posts.map((post) => (
                             <motion.div
                                 key={post._id}
@@ -82,21 +85,21 @@ const Posts = () => {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
 
                                 <div className="absolute inset-0 p-4 sm:p-6 flex flex-col justify-end backdrop-blur-sm opacity-0 hover:opacity-100 transition-opacity duration-300">
-                                    <h2 className="text-xs sm:text-sm text-gray-800 font-light hover:translate-x-2 transition-transform duration-300">
+                                    {/* <h2 className="text-xs sm:text-sm text-gray-800 font-light hover:translate-x-2 transition-transform duration-300">
                                         {new Date(post.createdAt).toLocaleDateString('id-ID', {
                                             year: 'numeric',
                                             month: 'long',
                                             day: 'numeric'
                                         })}
-                                    </h2>
+                                    </h2> */}
                                     <Link to={`/posts/${post._id}`}>
                                         <h4 className="mt-2 text-lg sm:text-lg font-semibold text-white hover:text-gray-400 hover:translate-x-2 transition-all duration-300">
                                             {post.title || 'Artikel Tanpa Judul'}
                                         </h4>
                                     </Link>
-                                    <p className="mt-2 text-xs sm:text-sm text-gray-300 line-clamp-3 sm:line-clamp-2 hover:translate-x-2 transition-transform duration-300">
+                                    {/* <p className="mt-2 text-xs sm:text-sm text-gray-300 line-clamp-3 sm:line-clamp-2 hover:translate-x-2 transition-transform duration-300">
                                         {post?.content?.slice(0, 100) || 'Belum ada konten untuk artikel ini.'}...
-                                    </p>
+                                    </p> */}
                                 </div>
                             </motion.div>
                         ))}

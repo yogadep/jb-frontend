@@ -131,12 +131,12 @@ const Login = () => {
                 </button>
             </form>
 
-            <p className="my-5 text-center text-gray-600">
+            {/* <p className="my-5 text-center text-gray-600">
                 Belum punya akun?{" "}
                 <Link to="/user-register" className="text-primary hover:text-indigo-500 font-medium">
                     Daftar disini
                 </Link>
-            </p>
+            </p> */}
         </div>
     );
 };

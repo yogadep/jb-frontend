@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import imp1 from "../../assets/process-1.jpg";
-import imp2 from "../../assets/process-2.jpg";
-import imp3 from "../../assets/process-3.jpg";
-import imp4 from "../../assets/process-4.jpg";
+import imp1 from "../../assets/step1.jpg";
+import imp2 from "../../assets/step2.jpg";
+import imp3 from "../../assets/step3.jpg";
+import imp4 from "../../assets/step4.jpg";
 
 const Process = () => {
     const [activeTab, setActiveTab] = useState(1);
