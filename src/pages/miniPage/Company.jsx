@@ -26,9 +26,9 @@ const Company = () => {
         {
             icon: <TfiGift />, title: "Custom Gifts", description: "Personalized gift solutions for all occasions, crafted with care and creativity."
         },
-        {
-            icon: <IoNewspaperOutline />, title: "Advertising Materials", description: "Creative design solutions for your business promotional needs."
-        }
+        // {
+        //     icon: <IoNewspaperOutline />, title: "Advertising Materials", description: "Creative design solutions for your business promotional needs."
+        // }
     ];
 
     const galleryImages = [
@@ -46,8 +46,8 @@ const Company = () => {
             <div className="max-w-6xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     <motion.div className="space-y-8" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
-                        <h2 className="text-4xl font-bold text-gray-900 mb-6">JIBO CRAFT</h2>
-                        <div className="w-20 h-1 bg-gray-400 mb-8"></div>
+                        {/* <h2 className="text-4xl font-bold text-gray-900 mb-6">JIBO CRAFT</h2>
+                        <div className="w-20 h-1 bg-gray-400 mb-8"></div> */}
                         <div className="flex justify-center mb-6">
                             <img src={jiboCraft} alt="JIBO CRAFT Logo" className="w-52 h-auto object-contain" />
                         </div>
@@ -69,17 +69,34 @@ const Company = () => {
                             <p>    
                                 If you have any questions, need a custom design, or simply want to explore more of our handcrafted collections, feel free to reach out to us via 
                                 <motion.span className="relative inline-block mx-1">
-                                    <motion.span className="absolute inset-0 bg-white px-2 py-0.5 rounded-lg shadow-md" initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1.2, ease: "easeOut" }} style={{ originX: 0 }}></motion.span>
-                                    <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" className="relative z-10 font-bold text-gray-900">WhatsApp</a>
+                                    <motion.span 
+                                        className="absolute inset-0 bg-white px-2 py-0.5 rounded-lg shadow-md"
+                                        initial={{ scaleX: 0 }}
+                                        animate={{ scaleX: 1 }}
+                                        transition={{ duration: 1, ease: "easeOut" }}
+                                        style={{ originX: 0 }}
+                                    />
+                                    <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" className="relative z-10 font-bold text-gray-900">
+                                        WhatsApp
+                                    </a>
                                 </motion.span> 
                                 or stay updated with our latest creations by following us on 
                                 <motion.span className="relative inline-block mx-1">
-                                    <motion.span className="absolute inset-0 bg-white px-2 py-0.5 rounded-lg shadow-md" initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 1.2, ease: "easeOut" }} style={{ originX: 0 }}></motion.span>
-                                    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="relative z-10 font-bold text-gray-900">Instagram</a>
+                                    <motion.span 
+                                        className="absolute inset-0 bg-white px-2 py-0.5 rounded-lg shadow-md"
+                                        initial={{ scaleX: 0 }}
+                                        animate={{ scaleX: 1 }}
+                                        transition={{ duration: 1, ease: "easeOut", delay: 0.5 }}  // Delay biar muncul setelah WA
+                                        style={{ originX: 0 }}
+                                    />
+                                    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="relative z-10 font-bold text-gray-900">
+                                        Instagram
+                                    </a>
                                 </motion.span>. We’d love to connect with you!
                             </p>
                         </div>
                     </motion.div>
+                    
                     <motion.div className="space-y-6" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
                         {services.map((service, index) => (
                             <motion.div key={index} className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300" whileHover={{ scale: 1.05 }}>
@@ -93,6 +110,10 @@ const Company = () => {
                             </motion.div>
                         ))}
                     </motion.div>
+                </div>
+                    <div className="mt-24 flex justify-center items-center mt-2">
+                        <div className="w-16 h-1 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full">
+                    </div>
                 </div>
                 <motion.div className="mt-20" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6 }}>
                     <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Our Latest Works</h3>
