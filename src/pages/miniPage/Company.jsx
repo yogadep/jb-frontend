@@ -52,9 +52,20 @@ const Company = () => {
                             <img src={jiboCraft} alt="JIBO CRAFT Logo" className="w-52 h-auto object-contain" />
                         </div>
                         <div className="text-gray-600 space-y-6">
-                            <motion.p initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>Welcome to the crafting division of JIBO UNLIMITED...</motion.p>
-                            <motion.p initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>Our journey in the crafting industry...</motion.p>
-                            <motion.p initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.4 }}>Each piece we create is handcrafted...</motion.p>
+                            <motion.p initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }}>
+                                Welcome to the crafting division of JIBO UNLIMITED. At JIBO CRAFT, we merge traditional 
+                                craftsmanship with contemporary design to create unique pieces that tell your story.
+                            </motion.p>
+                            <motion.p initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.2 }}>
+                                Our journey in the crafting industry began as an extension of our photography services, 
+                                where we recognized the need for beautifully crafted wedding accessories and gifts. Today, 
+                                we've grown into a full-service craft studio, specializing in wedding dowry, custom gifts, 
+                                and promotional materials.
+                            </motion.p>
+                            <motion.p initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.4 }}>
+                                Each piece we create is handcrafted with attention to detail and a commitment to quality, 
+                                ensuring that every item perfectly captures the significance of your special moments.
+                            </motion.p>
                         </div>
                     </motion.div>
                     <motion.div className="space-y-6" initial={{ opacity: 0, x: 50 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }}>
