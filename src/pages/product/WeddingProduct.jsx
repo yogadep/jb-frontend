@@ -72,12 +72,12 @@ const WeddingProduct = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 2 }}
                                 >
-                                    <h3 className="text-3xl font-bold text-white sm:mb-0">
+                                    {/* <h3 className="text-3xl font-bold text-white sm:mb-0">
                                         {product.name || 'Wedding Collection'}
                                     </h3>
                                     <p className="text-gray-300 text-lg font-semibold leading-relaxed">
                                         {product.description || 'Capturing beautiful moments of your special day'}
-                                    </p>
+                                    </p> */}
                                 </motion.div>
                             </div>
                         ))}

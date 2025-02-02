@@ -12,11 +12,11 @@ import { handleLogout } from '../utility/handleLogout';
 import { motion } from 'framer-motion'
 
 const productCategories = [
-    { name: 'Semua Produk', path: '/products' },
+    { name: 'All Catalogs', path: '/products' },
     { name: 'Wedding', path: '/products/wedding' },
     { name: 'Graduation', path: '/products/graduation' },
     { name: 'Maternity', path: '/products/maternity' },
-    { name: 'Pre-Wedding', path: '/products/prewededding' },
+    { name: 'Pre Wedding', path: '/products/prewededding' },
     { name: 'Studio', path: '/products/studio' },
     { name: 'Other', path: '/products/other' },
 ];

@@ -27,7 +27,7 @@ const AllProduct = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <h2 className="text-4xl font-bold text-white">Our Products</h2>
+                    <h2 className="text-4xl font-bold text-white">Our Catalogs</h2>
                 </motion.div>
 
                 {isLoading ? (
@@ -73,12 +73,12 @@ const AllProduct = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 2 }}
                                 >
-                                    <h3 className="text-3xl font-bold text-white sm:mb-0">
+                                    {/* <h3 className="text-3xl font-bold text-white sm:mb-0">
                                         {product.name || 'Unnamed Product'}
                                     </h3>
                                     <p className="text-gray-300 text-lg font-semibold leading-relaxed">
                                         {product.description || 'No description available'}
-                                    </p>
+                                    </p> */}
                                 </motion.div>
                             </div>
                         ))}

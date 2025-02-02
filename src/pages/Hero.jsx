@@ -6,7 +6,10 @@ import { motion } from "framer-motion";
 import slide1 from '../assets/slide1.jpg';
 import slide2 from '../assets/slide2.jpg';
 import slide3 from '../assets/slide3.jpg';
-import slide4 from '../assets/craft.jpg';
+import slide4 from '../assets/slide4.jpeg';
+import slide5 from '../assets/slide5.jpeg';
+import slide6 from '../assets/slide6.jpeg';
+
 
 const properties = [
     {
@@ -19,31 +22,39 @@ const properties = [
     {
         id: 2,
         image: slide2,
-        location: "photography",
+        location: "Photography",
         size: "Graduation",
         // price: "$ 200 000"
     },
+    // {
+    //     id: 3,
+    //     image: slide3,
+    //     location: "Photography",
+    //     size: "Maternity",
+    //     // price: "$ 500 000"
+    // },
     {
-        id: 3,
-        image: slide3,
+        id: 4,
+        image: slide4,
         location: "Photography",
         size: "Maternity",
-        // price: "$ 500 000"
+        // price: "$ 50 000"
     },
-    // {
-    //     id: 4,
-    //     image: slide4,
-    //     location: "Crafting",
-    //     size: "Handmade",
-    //     price: "$ 50 000"
-    // },
-    // {
-    //     id: 5,
-    //     image: slide4,
-    //     location: "Crafting",
-    //     size: "Handmade",
-    //     price: "$ 50 000"   
-    // }
+    {
+        id: 5,
+        image: slide5,
+        location: "Photography",
+        size: "Pre Wedding",
+        // price: "$ 50 000"   
+    },
+    {
+        id: 6,
+        image: slide6,
+        location: "Craft",
+        size: "Wedding Gifts",
+        // price: "$ 50 000"   
+    },
+
 ];
 
 const Hero = () => {
