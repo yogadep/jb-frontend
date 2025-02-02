@@ -1,10 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ImGift } from "react-icons/im";
-import { BsBox2Heart } from "react-icons/bs";
+import { BsBox2Heart, BsEnvelopePaperHeart } from "react-icons/bs";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { TfiGift } from "react-icons/tfi";
-import { BsEnvelopePaperHeart } from "react-icons/bs";
 import jiboCraft from '../../assets/craft.png';
 // Import gallery images
 import gallery1 from '../../assets/jibocraft1.jpeg';
@@ -15,22 +14,6 @@ import gallery5 from '../../assets/jibocraft5.jpeg';
 import gallery6 from '../../assets/jibocraft6.jpeg';
 
 const Company = () => {
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: {
-                duration: 0.8,
-                staggerChildren: 0.2,
-            },
-        },
-    };
-
-    const fadeInUpVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-    };
-
     const services = [
         {
             icon: <ImGift />,
@@ -69,130 +52,98 @@ const Company = () => {
     ];
 
     return (
-        <motion.section
-            className="bg-white py-8 px-4 sm:py-16 sm:px-6 lg:px-8 min-h-screen w-full"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={containerVariants}
-        >
-            <div className="w-full max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 mb-20">
+        <section className="relative min-h-screen bg-white py-20 px-4 overflow-hidden">
+            {/* Decorative top border */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gray-200 to-transparent"></div>
+            
+            <div className="max-w-6xl mx-auto">
+                {/* Main Content */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                     {/* Left Column - About */}
-                    <motion.div variants={fadeInUpVariants} className="space-y-8 w-full">
-                        <div className="w-full">
-                            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">JIBO CRAFT</h2>
+                    <div className="space-y-8">
+                        <div>
+                            <h2 className="text-4xl font-bold text-gray-900 mb-6">JIBO CRAFT</h2>
                             <div className="w-20 h-1 bg-gray-400 mb-8"></div>
-                            <div className="flex justify-center mb-6 w-full">
+                            <div className="flex justify-center mb-6">
                                 <img 
                                     src={jiboCraft} 
                                     alt="JIBO CRAFT Logo" 
-                                    className="w-36 sm:w-52 h-auto object-contain" 
+                                    className="w-52 h-auto object-contain" 
                                 />
                             </div>
-                            <div className="prose prose-sm sm:prose-lg text-gray-600 space-y-4 sm:space-y-6 w-full">
+                            <div className="text-gray-600 space-y-6">
                                 <p>
                                     Welcome to the crafting division of JIBO UNLIMITED. At JIBO CRAFT, we merge traditional 
                                     craftsmanship with contemporary design to create unique pieces that tell your story.
                                 </p>
                                 <p>
                                     Our journey in the crafting industry began as an extension of our photography services, 
-                                    where we recognized the need for beautifully crafted wedding accessories and gifts. Today, 
-                                    we've grown into a full-service craft studio, specializing in wedding dowry, custom gifts, 
-                                    and promotional materials.
+                                    where we recognized the need for beautifully crafted wedding accessories and gifts.
                                 </p>
                                 <p>
                                     Each piece we create is handcrafted with attention to detail and a commitment to quality, 
                                     ensuring that every item perfectly captures the significance of your special moments.
                                 </p>
                                 <p>    
-                                    If you have any 
-                                    questions, need a custom design, or simply want to explore more of our handcrafted collections, feel free 
-                                    to reach out to us via 
-                                    <motion.span className="relative inline-block mx-1">
-                                        <motion.span
-                                            className="absolute inset-0 bg-white px-2 py-0.5 rounded-lg shadow-md"
-                                            initial={{ scaleX: 0 }}
-                                            animate={{ scaleX: 1 }}
-                                            transition={{ duration: 1.2, ease: "easeOut" }}
-                                            style={{ originX: 0 }}
-                                        ></motion.span>
-                                        <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" className="relative z-10 font-bold text-gray-900">
-                                            WhatsApp
-                                        </a>
-                                    </motion.span> 
-                                    or stay updated with our latest creations by following us on 
-                                    <motion.span className="relative inline-block mx-1">
-                                        <motion.span
-                                            className="absolute inset-0 bg-white px-2 py-0.5 rounded-lg shadow-md"
-                                            initial={{ scaleX: 0 }}
-                                            animate={{ scaleX: 1 }}
-                                            transition={{ duration: 1.2, ease: "easeOut" }}
-                                            style={{ originX: 0 }}
-                                        ></motion.span>
-                                        <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="relative z-10 font-bold text-gray-900">
-                                            Instagram
-                                        </a>
-                                    </motion.span>. We'd love to connect with you!
+                                    Connect with us on 
+                                    <a href="https://wa.me/yourphonenumber" target="_blank" rel="noopener noreferrer" className="font-bold text-gray-900 mx-1">
+                                        WhatsApp
+                                    </a> 
+                                    or follow us on 
+                                    <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer" className="font-bold text-gray-900 mx-1">
+                                        Instagram
+                                    </a>
                                 </p>
                             </div>
                         </div>        
-                    </motion.div>
+                    </div>
 
                     {/* Right Column - Services */}
-                    <motion.div variants={fadeInUpVariants} className="space-y-4 sm:space-y-8 w-full">
+                    <div className="space-y-6">
                         {services.map((service, index) => (
-                            <motion.div
+                            <div
                                 key={index}
-                                variants={fadeInUpVariants}
-                                className="bg-gray-50 rounded-xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300 w-full"
+                                className="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition-all duration-300"
                             >
-                                <div className="flex items-start sm:items-center gap-3 sm:gap-4">
-                                    <div className="text-2xl sm:text-4xl text-gray-600 flex-shrink-0">
+                                <div className="flex items-start gap-4">
+                                    <div className="text-3xl text-gray-600 flex-shrink-0">
                                         {service.icon}
                                     </div>
-                                    <div className="flex-1">
-                                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 sm:mb-2">
-                                            {service.title}
-                                        </h3>
-                                        <p className="text-sm sm:text-base text-gray-600">
-                                            {service.description}
-                                        </p>
+                                    <div>
+                                        <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
+                                        <p className="text-gray-600">{service.description}</p>
                                     </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         ))}
-                    </motion.div>
-                </div>
-
-                {/* Bottom Decorative Element */}
-                <div className="mt-16 sm:mt-24 flex justify-center">
-                    <div className="w-16 h-1 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full"></div>
+                    </div>
                 </div>
 
                 {/* Gallery Section */}
-                <motion.div variants={fadeInUpVariants} className="mt-12 sm:mt-20 w-full">
-                    <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 sm:mb-8 text-center">
-                        Our Latest Works
-                    </h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
+                <div className="mt-20">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Our Latest Works</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                         {galleryImages.map((image, index) => (
-                            <motion.div
+                            <div
                                 key={index}
-                                variants={fadeInUpVariants}
-                                className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg shadow-lg group w-full"
+                                className="aspect-w-4 aspect-h-3 overflow-hidden rounded-lg shadow-lg group"
                             >
                                 <img
                                     src={image.src}
                                     alt={image.alt}
                                     className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
                                 />
-                            </motion.div>
+                            </div>
                         ))}
                     </div>
-                </motion.div>
+                </div>
+
+                {/* Bottom Decorative Element */}
+                <div className="mt-24 flex justify-center">
+                    <div className="w-16 h-1 bg-gradient-to-r from-gray-200 to-gray-300 rounded-full"></div>
+                </div>
             </div>
-        </motion.section>
+        </section>
     );
 };
 
