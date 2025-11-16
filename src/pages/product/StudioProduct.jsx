@@ -28,7 +28,7 @@ const StudioProduct = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <h2 className="text-4xl font-bold text-white">studio Photography</h2>
+                    <h2 className="text-4xl font-bold text-white">Studio Photography</h2>
                 </motion.div>
 
                 {isLoading ? (
@@ -42,44 +42,38 @@ const StudioProduct = () => {
                         No Product Available
                     </div>
                 ) : (
-                    <div className="grid grid-cols-1 gap-20 mt-16">
-                        {products.map((product, index) => (
-                            <div
-                                key={product.id || index}
-                                className={`flex flex-col lg:flex-row ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-10`}
-                            >
-                                <motion.div
-                                    className="w-full lg:w-2/3"
-                                    initial={{ opacity: 0, x: index % 2 === 0 ? -300 : 300 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 2 }}
-                                >
-                                    <div className="rounded-[2rem] overflow-hidden">
-                                        <img
-                                            src={product?.image || '/api/placeholder/800/600'}
-                                            alt={product?.name || 'studio Photography'}
-                                            onError={(e) => {
-                                                e.target.src = '/api/placeholder/800/600';
-                                            }}
-                                            className="w-full h-[300px] lg:h-[500px] object-cover transition-transform duration-700 hover:scale-110"
-                                        />
-                                    </div>
-                                </motion.div>
 
-                                <motion.div
-                                    className="w-full lg:w-2/4 space-y-6 text-center lg:text-center"
-                                    initial={{ opacity: 0, x: index % 2 === 0 ? 300 : -300 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    transition={{ duration: 2 }}
-                                >
-                                    {/* <h3 className="text-3xl font-bold text-white sm:mb-0">
-                                        {product.name || 'studio Collection'}
-                                    </h3>
-                                    <p className="text-gray-300 text-lg font-semibold leading-relaxed">
-                                        {product.description || 'Capturing beautiful moments of your special day'}
-                                    </p> */}
-                                </motion.div>
-                            </div>
+                    // 🔥 DIUBAH: dari flex layout → jadi grid 2 kolom
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">  
+                        {products.map((product, index) => (
+
+                            // ❌ DIHAPUS: wrapper flex yang bikin gambar tidak presisi
+                            // <div className={`flex flex-col lg:flex-row ...`}></div>
+
+                            // 🔥 DIGANTI: langsung pakai motion.div sebagai card
+                            <motion.div 
+                                key={product.id || index}
+                                className="w-full rounded-[2rem] overflow-hidden"   // ✅ FIX: bikin card rapi full width
+                                initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 0.8 }}
+                            >
+
+                                {/* 🔥 DIUBAH: gambar langsung di card, tanpa flex 2/3 dan 2/4 */}
+                                <img
+                                    src={product?.image || '/api/placeholder/800/600'}
+                                    alt={product?.name || 'Studio Photography'}
+                                    onError={(e) => {
+                                        e.target.src = '/api/placeholder/800/600';
+                                    }}
+
+                                    // 🔥 DIUBAH: height konsisten → biar semua gambar sama panjang
+                                    className="w-full h-[260px] md:h-[320px] lg:h-[380px] 
+                                               object-cover transition-transform duration-700 hover:scale-110"
+                                />
+
+                            </motion.div>
+
                         ))}
                     </div>
                 )}
